@@ -1,4 +1,5 @@
 import { MobileMenu } from "../mobileMenu";
+import { DesktopMenu } from "../desktopMenu";
 
 import { FaGreaterThan } from "react-icons/fa";
 import { FaLessThan } from "react-icons/fa";
@@ -15,32 +16,7 @@ export function Header() {
           <FaGreaterThan color="#6366F1" />
         </div>
 
-        <nav className="hidden md:flex gap-10 items-center text-[#6366F1] font-extrabold">
-          <a
-            href="#inicio"
-            className="hover:text-[#4F46E5] transition-colors cursor-pointer text-lg"
-          >
-            Início
-          </a>
-          <a
-            href="#sobre"
-            className="hover:text-[#4F46E5] transition-colors cursor-pointer text-lg"
-          >
-            Sobre
-          </a>
-          <a
-            href="#tecnologias"
-            className="hover:text-[#4F46E5] transition-colors cursor-pointer text-lg"
-          >
-            Tecnologias
-          </a>
-          <a
-            href="#projetos"
-            className="hover:text-[#4F46E5] transition-colors cursor-pointer text-lg"
-          >
-            Projetos
-          </a>
-        </nav>
+        <DesktopMenu />
 
         <MobileMenu />
       </div>

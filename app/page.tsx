@@ -273,7 +273,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-10 bg-[#0B0F1A]">
+      <section className="py-10 bg-[#0B0F1A]" id="contato">
         <h2 className="mb-2 text-center text-4xl font-bold text-[#6366F1]">
           Contato
         </h2>
