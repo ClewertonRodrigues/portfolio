@@ -21,20 +21,22 @@ export function MobileMenu() {
       <button type="button" title="menu">
         {open ? (
           <IoIosClose
-            size={50}
-            className="cursor-pointer"
+            size={45}
+            className="cursor-pointer bg-[#0B0F1A] rounded-md"
             color="#6366F1"
             data-aos="zoom-in"
             onClick={openMenu}
           />
         ) : (
-          <IoMenu
-            size={42}
-            className="cursor-pointer"
+          <div className="flex items-center justify-center h-20">
+            <IoMenu
+            size={45}
+            className="cursor-pointer bg-[#0B0F1A] p-1 rounded-md"
             color="#6366F1"
             data-aos="zoom-in"
             onClick={openMenu}
-          />
+            />
+          </div>
         )}
       </button>
 
