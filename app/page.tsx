@@ -8,6 +8,10 @@ import imgPortfolio from "@/assets/img-portfolio3.png";
 import { FormContact } from "@/components/formContact";
 import { Project } from "@/components/project";
 import { Technology } from "@/components/technology";
+import { About } from "@/components/about";
+
+import { getDataSobre } from "@/lib/cosmic";
+import { SobreDataProps } from "@/utils/sobre.type"
 
 import {
   FaGithub,
@@ -34,7 +38,10 @@ import { IoLogoFirebase } from "react-icons/io5";
 import "aos/dist/aos.css";
 import { TitleAnimated } from "@/components/animationTitle";
 
-export default function Home() {
+export default async function Home() {
+
+  const { object }: SobreDataProps = await getDataSobre()
+
   const year = new Date().getFullYear();
 
   return (
@@ -113,82 +120,14 @@ export default function Home() {
 
         <div className="absolute bottom-45 right-60 size-0 lg:size-60 opacity-20 rounded-full blur-3xl bg-radial-[at_25%_25%] from-white to-[#6366F1] to-75% animate-[ping_2s_ease-in-out_infinite]"></div>
       </section>
-      <section className="pb-10 relative bg-[#12182A]" id="sobre">
-        <h2
-          className="pt-10 text-center hidden lg:block text-4xl font-bold text-[#6366F1]"
-          data-aos="fade-up"
-        >
-          Sobre
-        </h2>
 
-        <div className="w-full max-w-7xl flex flex-col-reverse xl:flex-row justify-between items-center mx-auto px-3  pt-10">
-          <div className="w-full lg:max-w-2xl" data-aos="fade-up-right">
-            <h2 className="text-3xl md:text-4xl font-bold mb-5 mt-2 md:mt-0 text-center xl:text-start text-white">
-              Clewerton Rodrigues
-            </h2>
-            <p className="text-center text-[#D1D5DB] leading-relaxed xl:text-start text-lg">
-              Atualmente curso o 4º semestre de Análise e Desenvolvimento de
-              Sistemas e complemento minha formação com o curso FullStack Pro,
-              buscando aprender na prática as tecnologias e boas práticas
-              exigidas pelo mercado.
-            </p>
+      <About 
+        name={object.metadata.name}
+        bio={object.metadata.bio}
+        imgUrl={object.metadata.hero.url}
+        infos={object.metadata.infos}
+      />
 
-            <p className="text-center text-[#D1D5DB] leading-relaxed xl:text-start text-lg mt-3">
-              Desenvolvo projetos pessoais com foco em aplicar e consolidar meus
-              conhecimentos, criando aplicações que refletem minha evolução como
-              desenvolvedor.
-            </p>
-
-            <p className="text-center text-[#D1D5DB] leading-relaxed xl:text-start text-lg mt-3">
-              Estou em busca da minha primeira oportunidade na área, onde eu
-              possa contribuir com o time, aprender, aprimorar minhas
-              hablilidades e crescer profissionalmente.
-            </p>
-
-            <div className="mt-10">
-              <div className="flex gap-5 items-center bg-[#0F172A] px-3 py-1.5 rounded-md transition-all hover:border-[#6366F1] hover:shadow-lg hover:shadow-[#6366F1]/20 border border-[#1F2937]">
-                <FcGraduationCap size={30} />
-                <div>
-                  <strong className="text-white">Faculdade</strong>
-                  <p className="mt-1 text-[#9CA3AF]">
-                    - 4° semestre - Analise e Desenvolvimento de sistemas |
-                    Estácio
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-5 items-center bg-[#0F172A] px-3 py-1.5 rounded-md transition-all hover:border-[#6366F1] hover:shadow-lg hover:shadow-[#6366F1]/20 border border-[#1F2937] mt-3">
-                <FcReadingEbook size={30} />
-                <div>
-                  <strong className="text-white">Curso</strong>
-                  <p className="mt-1 text-[#9CA3AF]">
-                    - FullStack Pro - Em andamento | Sujeito Programador
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-5 items-center bg-[#0F172A] px-3 py-1.5 rounded-md transition-all hover:border-[#6366F1] hover:shadow-lg hover:shadow-[#6366F1]/20 border border-[#1F2937] mt-3">
-                <FcElectroDevices size={30} />
-                <div>
-                  <strong className="text-white">Desenvolvendo</strong>
-                  <p className="mt-1 text-[#9CA3AF]">- Projetos pessoais</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            className="w-52 h-52 md:w-2xs md:h-72 border-4 border-[#6366F1] rounded-full relative shadow-[0_0_40px_rgba(99,102,241,0.4)]"
-            data-aos="fade-up-left"
-          >
-            <Image
-              src={myImg}
-              alt="Imagem do desenvolvedor"
-              priority={true}
-              fill={true}
-              className="rounded-full p-1 object-cover"
-            />
-          </div>
-        </div>
-      </section>
       <section className="py-15 bg-[#0B0F1A]" id="tecnologias">
         <h2
           className="mb-2 text-center text-3xl md:text-4xl font-bold text-[#6366F1]"
