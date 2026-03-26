@@ -1,13 +1,13 @@
-import myImg from "@/app/assets/new-img.jpeg";
+import myImg from "@/assets/new-img.jpeg";
 
 import Image from "next/image";
-import imgProjeto from "@/app/assets/preview.png";
-import imgProjeto2 from "@/app/assets/imgFormulario.png";
-import imgPortfolio from "@/app/assets/img-portfolio3.png";
+import imgProjeto from "@/assets/preview.png";
+import imgProjeto2 from "@/assets/imgFormulario.png";
+import imgPortfolio from "@/assets/img-portfolio3.png";
 
-import { FormContact } from "./components/formContact";
-import { Project } from "./components/project";
-import { Technology } from "./components/technology";
+import { FormContact } from "@/components/formContact";
+import { Project } from "@/components/project";
+import { Technology } from "@/components/technology";
 
 import {
   FaGithub,
@@ -32,7 +32,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoFirebase } from "react-icons/io5";
 
 import "aos/dist/aos.css";
-import { TitleAnimated } from "./components/animationTitle";
+import { TitleAnimated } from "@/components/animationTitle";
 
 export default function Home() {
   const year = new Date().getFullYear();

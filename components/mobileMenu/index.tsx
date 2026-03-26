@@ -5,7 +5,7 @@ import { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { IoIosClose } from "react-icons/io";
 
-import useActiveSection from "@/app/components/activeSection"
+import useActiveSection from "@/components/activeSection"
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false);

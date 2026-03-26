@@ -1,6 +1,6 @@
 "use client"
 
-import useActiveSection from "../activeSection"
+import useActiveSection from "@/components/activeSection"
 
 export function DesktopMenu() {
 
