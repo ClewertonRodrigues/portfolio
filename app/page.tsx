@@ -1,17 +1,19 @@
 import myImg from "@/assets/new-img.jpeg";
 
 import Image from "next/image";
-import imgProjeto from "@/assets/preview.png";
-import imgProjeto2 from "@/assets/imgFormulario.png";
+
 import imgPortfolio from "@/assets/img-portfolio3.png";
 
 import { FormContact } from "@/components/formContact";
-import { Project } from "@/components/project";
 import { Technology } from "@/components/technology";
 import { About } from "@/components/about";
+import { Projects } from "@/components/projects"
 
 import { getDataSobre } from "@/lib/cosmic";
 import { SobreDataProps } from "@/utils/sobre.type"
+
+import { getDataProjects } from "@/lib/cosmic";
+import { ProjectsProps } from "@/utils/project.type";
 
 import {
   FaGithub,
@@ -24,11 +26,6 @@ import {
   FaCopyright,
 } from "react-icons/fa";
 import { FaCss } from "react-icons/fa6";
-import {
-  FcGraduationCap,
-  FcReadingEbook,
-  FcElectroDevices,
-} from "react-icons/fc";
 import { RiNextjsFill } from "react-icons/ri";
 import { BiLogoJavascript } from "react-icons/bi";
 import { BiLogoTypescript } from "react-icons/bi";
@@ -40,7 +37,8 @@ import { TitleAnimated } from "@/components/animationTitle";
 
 export default async function Home() {
 
-  const { object }: SobreDataProps = await getDataSobre()
+  const { object }: SobreDataProps = await getDataSobre();
+  const  projects: ProjectsProps = await getDataProjects();
 
   const year = new Date().getFullYear();
 
@@ -184,33 +182,8 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <section className="py-10 bg-[#12182A]" id="projetos">
-        <h2
-          className="mb-2 text-center text-4xl font-bold text-[#6366F1]"
-          data-aos="fade-up"
-        >
-          Projetos
-        </h2>
-
-        <div className="w-full max-w-7xl mt-10 mx-auto grid md:grid-cols-2 gap-6 md:gap-4 px-3">
-          <Project
-            imgUrl={imgProjeto}
-            title="Devtasks"
-            descripton="Aplicação CRUD de tarefas com foco em performance, tipagem forte com TypeScript e UI moderna com Tailwind."
-            languagens={["HTML", "CSS", "Javascript"]}
-            linkAcess="https://devtasks-pearl.vercel.app"
-            linkRepo="https://github.com/ClewertonRodrigues/devtasks"
-          />
-          <Project
-            imgUrl={imgProjeto2}
-            title="Formulário"
-            descripton="Aplicação CRUD de tarefas com foco em performance, tipagem forte com TypeScript e UI moderna com Tailwind."
-            languagens={["HTML", "CSS", "Javascript"]}
-            linkAcess="https://clewertonrodrigues.github.io/login-cadastro"
-            linkRepo="https://github.com/ClewertonRodrigues/login-cadastro"
-          />
-        </div>
-      </section>
+      
+      <Projects objects={projects}/>
 
       <section className="py-10 bg-[#0B0F1A]" id="contato">
         <h2 className="mb-2 text-center text-4xl font-bold text-[#6366F1]">
