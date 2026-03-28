@@ -45,7 +45,7 @@ export async function About({ name, bio, imgUrl, infos }: SobreProps) {
             {infos.map((item, index) => (
               <div
                 key={index}
-                className="flex gap-5 items-center bg-[#0F172A] px-3 py-1.5 rounded-md transition-all hover:border-[#6366F1] hover:shadow-lg hover:shadow-[#6366F1]/20 border border-[#1F2937]"
+                className="flex gap-5 items-center bg-[#0F172A] px-3 py-2 rounded-md transition-all hover:border-[#6366F1] hover:shadow-lg hover:shadow-[#6366F1]/20 border border-[#1F2937]"
               >
                 {item.icon === "faculdade" && (
                   <FcGraduationCap size={30} />

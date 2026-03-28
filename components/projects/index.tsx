@@ -22,21 +22,21 @@ export function Projects({ objects }: listProjectsProps) {
         {objects.objects.map(project => (
           <div
             key={project.metadata.title}
-            className="bg-[#0F172A] rounded-xl overflow-hidden border border-[#1F2937] group hover:-translate-y-2 hover:shadow hover:shadow-[#6366F1]/20 transition-all duration-300"
+            className="bg-[#0F172A] rounded-xl overflow-hidden border border-[#1F2937] group transform-gpu hover:-translate-y-1 hover:shadow hover:shadow-[#6366F1]/20 transition-transform duration-300"
             data-aos="fade-up"
           >
-            <div className="group-hover:scale-105 md:min-h-80 transition-all duration-500 relative">
-              <div className="w-full min-h-52 md:min-h-80 relative">
+            <div className="md:min-h-80 relative">
+              <div className="w-full min-h-52 md:min-h-80 relative overflow-hidden">
                 <Image
                   src={project.metadata.thumbnail.url}
                   alt="imagem do projeto"
                   priority={true}
                   fill={true}
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 
-              <div className="absolute inset-0 md:min-h-80 bg-black/70 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition">
+              <div className="absolute inset-0 md:min-h-80 bg-black/70 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex w-full h-full justify-center items-center gap-5 z-50">
                   <a
                     href={project.metadata.live_url}
