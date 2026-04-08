@@ -32,6 +32,12 @@ export function DesktopMenu() {
       >
         Projetos
       </a>
+      <a
+        href="#contato"
+        className={`hover:text-[#4F46E5] transition-colors cursor-pointer text-lg relative after:content-[''] after:absolute after:bottom-0 after:bg-[#6366F1] after:h-0.5 after:left-0 after:w-0 after:transition-[width] after:duration-300 after:ease-out ${activeSection === "contato" ? "after:w-full" : ""}`}
+      >
+        Contato
+      </a>
     </nav>
   );
 }
