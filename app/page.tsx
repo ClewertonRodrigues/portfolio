@@ -32,7 +32,6 @@ import { BiLogoTypescript } from "react-icons/bi";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoFirebase } from "react-icons/io5";
 
-import "aos/dist/aos.css";
 import { TitleAnimated } from "@/components/animationTitle";
 
 export default async function Home() {

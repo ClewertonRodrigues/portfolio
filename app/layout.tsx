@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import "aos/dist/aos.css";
 
 import { Header } from "@/components/header";
 import { AosProvider } from "@/components/animation";
