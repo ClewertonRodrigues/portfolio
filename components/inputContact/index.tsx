@@ -22,7 +22,7 @@ export function InputContact({
   return (
     <>
       <input
-        className="h-11 bg-[#0B0F1A] rounded-md px-3 outline-0 focus:border-[#6366F1] border-2 border-[#1F2937] placeholder:text-[#D1D5DB]"
+        className="h-11 bg-[#0B0F1A] text-white rounded-md px-3 outline-0 focus:border-[#6366F1] border-2 border-[#1F2937] placeholder:text-[#D1D5DB]"
         type={type}
         placeholder={placeholder}
         {...register(name, rules)}

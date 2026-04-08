@@ -91,7 +91,7 @@ export function FormContact() {
         <textarea
           id="message"
           placeholder="Digite sua mensagem..."
-          className="bg-[#0B0F1A] px-3 py-1.5 h-40 rounded-md resize-none outline-0 border-2 border-[#1F2937] focus:border-[#6366F1] placeholder:text-[#D1D5DB]"
+          className="bg-[#0B0F1A] text-white px-3 py-1.5 h-40 rounded-md resize-none outline-0 border-2 border-[#1F2937] focus:border-[#6366F1] placeholder:text-[#D1D5DB]"
           {...register("message")}
         ></textarea>
         {errors.message?.message && (
