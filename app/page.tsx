@@ -7,10 +7,10 @@ import imgPortfolio from "@/assets/img-portfolio3.png";
 import { FormContact } from "@/components/formContact";
 import { Technology } from "@/components/technology";
 import { About } from "@/components/about";
-import { Projects } from "@/components/projects"
+import { Projects } from "@/components/projects";
 
 import { getDataSobre } from "@/lib/cosmic";
-import { SobreDataProps } from "@/utils/sobre.type"
+import { SobreDataProps } from "@/utils/sobre.type";
 
 import { getDataProjects } from "@/lib/cosmic";
 import { ProjectsProps } from "@/utils/project.type";
@@ -35,16 +35,15 @@ import { IoLogoFirebase } from "react-icons/io5";
 import { TitleAnimated } from "@/components/animationTitle";
 
 export default async function Home() {
-
   const { object }: SobreDataProps = await getDataSobre();
-  const  projects: ProjectsProps = await getDataProjects();
+  const projects: ProjectsProps = await getDataProjects();
 
   const year = new Date().getFullYear();
 
   return (
     <main>
       <section
-        className="min-h-[calc(100vh-80px)] w-full bg-[#0B0F1A] flex justify-center items-center relative"
+        className="min-h-[calc(100vh-80px)] w-full bg-[#0B0F1A] flex justify-center items-center"
         id="inicio"
       >
         <div className="w-full max-w-7xl flex justify-between items-center px-3">
@@ -103,22 +102,24 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className="w-full max-w-md h-75 hidden lg:block relative">
-            <Image
-              src={imgPortfolio}
-              alt="Imagem ilustrativa de desenvolvimento web"
-              priority={true}
-              fill={true}
-              className="drop-shadow-[0_0_30px_rgba(99,102,241,0.4)]"
-              data-aos="fade-left"
-            />
+          <div className="w-full max-w-md h-75 hidden lg:flex justify-center items-center relative">
+            <div className="relative w-full h-full flex items-center justify-center">
+              <Image
+                src={imgPortfolio}
+                alt="Imagem ilustrativa de desenvolvimento web"
+                priority={true}
+                fill={true}
+                className="object-contain drop-shadow-[0_0_30px_rgba(99,102,241,0.4)]"
+                data-aos="fade-left"
+              />
+
+              <div className="size-0 lg:size-60 opacity-20 rounded-full blur-3xl bg-radial-[at_25%_25%] from-white to-[#6366F1] to-75% animate-[ping_2s_ease-in-out_infinite]"></div>
+            </div>
           </div>
         </div>
-
-        <div className="absolute bottom-45 right-60 size-0 lg:size-60 opacity-20 rounded-full blur-3xl bg-radial-[at_25%_25%] from-white to-[#6366F1] to-75% animate-[ping_2s_ease-in-out_infinite]"></div>
       </section>
 
-      <About 
+      <About
         name={object.metadata.name}
         bio={object.metadata.bio}
         imgUrl={object.metadata.hero.url}
@@ -141,10 +142,7 @@ export default async function Home() {
             icon={<FaHtml5 size={50} color="#E34F26" />}
             name="HTML"
           />
-          <Technology 
-            icon={<FaCss size={50} color="#6B399C" />} 
-            name="CSS"
-          />
+          <Technology icon={<FaCss size={50} color="#6B399C" />} name="CSS" />
           <Technology
             icon={<BiLogoJavascript size={50} color="#F7DF1E" />}
             name="Javascript"
@@ -165,10 +163,7 @@ export default async function Home() {
             icon={<RiTailwindCssFill size={50} color="#3EBFF8" />}
             name="Tailwind"
           />
-          <Technology 
-            icon={<FaSass size={50} color="#CE6B9C" />} 
-            name="Sass" 
-          />
+          <Technology icon={<FaSass size={50} color="#CE6B9C" />} name="Sass" />
           <Technology
             icon={<FaGitAlt size={50} color="#F05539" />}
             name="Git"
@@ -181,8 +176,8 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      
-      <Projects objects={projects}/>
+
+      <Projects objects={projects} />
 
       <section className="py-10 bg-[#0B0F1A]" id="contato">
         <h2 className="mb-2 text-center text-4xl font-bold text-[#6366F1]">
