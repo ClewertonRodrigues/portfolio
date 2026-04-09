@@ -11,12 +11,8 @@ export function MobileMenu() {
   const [open, setOpen] = useState(false);
   const activeSection = useActiveSection()
 
-  function openMenu() {
-    if (open) {
-      setOpen(false);
-    } else {
-      setOpen(true);
-    }
+  function toggleMenu() {
+    setOpen(prev => !prev)
   }
 
   return (
@@ -28,7 +24,7 @@ export function MobileMenu() {
             className="cursor-pointer bg-[#0B0F1A] rounded-md"
             color="#6366F1"
             data-aos="zoom-in"
-            onClick={openMenu}
+            onClick={toggleMenu}
           />
         ) : (
           <div className="flex items-center justify-center h-20">
@@ -37,7 +33,7 @@ export function MobileMenu() {
             className="cursor-pointer bg-[#0B0F1A] p-1 rounded-md"
             color="#6366F1"
             data-aos="zoom-in"
-            onClick={openMenu}
+            onClick={toggleMenu}
             />
           </div>
         )}
@@ -52,35 +48,35 @@ export function MobileMenu() {
             <a
               href="#inicio"
               className={`hover:bg-[#4F46E5] w-full text-center py-3 rounded-md transition-colors duration-300 cursor-pointer text-lg font-bold ${activeSection === "inicio" ? "bg-[#6366F1]" : ""}`}
-              onClick={openMenu}
+              onClick={toggleMenu}
             >
               Início
             </a>
             <a
               href="#sobre"
               className={`hover:bg-[#4F46E5] w-full text-center py-3 rounded-md transition-colors duration-300 cursor-pointer text-lg font-bold ${activeSection === "sobre" ? "bg-[#6366F1]" : ""}`}
-              onClick={openMenu}
+              onClick={toggleMenu}
             >
               Sobre
             </a>
             <a
               href="#tecnologias"
               className={`hover:bg-[#4F46E5] w-full text-center py-3 rounded-md transition-colors duration-300 cursor-pointer text-lg font-bold ${activeSection === "tecnologias" ? "bg-[#6366F1]" : ""}`}
-              onClick={openMenu}
+              onClick={toggleMenu}
             >
               Tecnologias
             </a>
             <a
               href="#projetos"
               className={`hover:bg-[#4F46E5] w-full text-center py-3 rounded-md transition-colors duration-300 cursor-pointer text-lg font-bold ${activeSection === "projetos" ? "bg-[#6366F1]" : ""}`}
-              onClick={openMenu}
+              onClick={toggleMenu}
             >
               Projetos
             </a>
             <a
               href="#contato"
               className={`hover:bg-[#4F46E5] w-full text-center py-3 rounded-md transition-colors duration-300 cursor-pointer text-lg font-bold ${activeSection === "contato" ? "bg-[#6366F1]" : ""}`}
-              onClick={openMenu}
+              onClick={toggleMenu}
             >
               Contato
             </a>
