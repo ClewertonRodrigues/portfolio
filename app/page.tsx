@@ -61,13 +61,13 @@ export default async function Home() {
             <div className="w-full flex flex-col lg:flex-row items-center lg:items-start gap-3">
               <a
                 href="#projetos"
-                className="rounded-xl bg-[#6366F1] text-white font-bold px-14.5 lg:px-8 py-4 text-xl border-2 hover:scale-105 hover:bg-[#4F46E5] hover:shadow-lg shadow-[#6366F1]/40 transition-transform duration-500 cursor-pointer"
+                className="rounded-xl bg-[#6366F1] text-white font-bold px-14.5 lg:px-8 py-4 text-xl border-2 md:hover:scale-105 hover:bg-[#4F46E5] active:scale-95 hover:shadow-xl shadow-[#6366F1]/40 transition-all duration-300 cursor-pointer"
               >
                 Ver projetos
               </a>
               <a
                 href="#contato"
-                className="rounded-xl text-[#6366F1] font-bold px-8 py-4 text-xl border-2 border-[#6366F1] hover:scale-105 hover:bg-[#6366F1]/10 transition-transform duration-500 cursor-pointer"
+                className="rounded-xl text-[#6366F1] font-bold px-8 py-4 text-xl border-2 border-[#6366F1] md:hover:scale-105 hover:bg-[#6366F1]/10 active:scale-95 transition-all duration-300 cursor-pointer"
               >
                 Entre em contato
               </a>
@@ -78,7 +78,7 @@ export default async function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="linkedin"
-                className="bg-[#6366F1] p-2 rounded-full hover:scale-110 hover:bg-[#4F46E5] transition-all duration-300 cursor-pointer"
+                className="bg-[#6366F1] p-2 rounded-full md:hover:scale-110 active:scale-95 hover:bg-[#4F46E5] transition-all duration-300 cursor-pointer"
               >
                 <FaLinkedin color="white" size={28} />
               </a>
@@ -87,7 +87,7 @@ export default async function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="github"
-                className="bg-[#6366F1] p-2 rounded-full hover:scale-110 hover:bg-[#4F46E5] transition-all duration-300 cursor-pointer"
+                className="bg-[#6366F1] p-2 rounded-full md:hover:scale-110 active:scale-95 hover:bg-[#4F46E5] transition-all duration-300 cursor-pointer"
               >
                 <FaGithub color="white" size={28} />
               </a>
@@ -95,7 +95,7 @@ export default async function Home() {
                 href="/curriculo.pdf"
                 download="Clewerton_Rodrigues_CV.pdf"
                 aria-label="curriculo"
-                className="bg-[#6366F1] p-2 rounded-full hover:scale-110 hover:bg-[#4F46E5] transition-all duration-300 cursor-pointer"
+                className="bg-[#6366F1] p-2 rounded-full md:hover:scale-110 active:scale-95 hover:bg-[#4F46E5] transition-all duration-300 cursor-pointer"
               >
                 <FaFile color="white" size={28} />
               </a>
@@ -202,10 +202,10 @@ export default async function Home() {
           </p>
 
           <div className="flex justify-center gap-5 mt-5">
-            <div className="bg-[#6366F1] p-2 rounded-full hover:scale-110 transition-all duration-300 hover:bg-[#4F46E5] cursor-pointer">
+            <div className="bg-[#6366F1] p-2 rounded-full md:hover:scale-110 active:scale-95 transition-all duration-300 hover:bg-[#4F46E5] cursor-pointer">
               <FaLinkedin color="#fff" size={28} />
             </div>
-            <div className="bg-[#6366F1] p-2 rounded-full hover:scale-110 transition-all duration-300 hover:bg-[#4F46E5] cursor-pointer">
+            <div className="bg-[#6366F1] p-2 rounded-full md:hover:scale-110 active:scale-95 transition-all duration-300 hover:bg-[#4F46E5] cursor-pointer">
               <FaGithub color="#fff" size={28} />
             </div>
           </div>

@@ -101,7 +101,7 @@ export function FormContact() {
 
       <button
         type="submit"
-        className="bg-[#6366F1] w-full h-11 rounded-md font-bold text-white cursor-pointer hover:bg-[#4F46E5] duration-300 transition-colors"
+        className="bg-[#6366F1] active:scale-95 w-full h-11 rounded-md font-bold text-white cursor-pointer hover:bg-[#4F46E5] duration-300 transition-all"
       >
         Enviar mensagem
       </button>

@@ -41,7 +41,7 @@ export function Projects({ objects }: listProjectsProps) {
                   <a
                     href={project.metadata.live_url}
                     target="_blank"
-                    className="bg-[#6366F1] border-2 text-white font-bold px-4 py-2 rounded-md cursor-pointer flex gap-2 items-center hover:bg-[#4F46E5] transition-all duration-300"
+                    className="bg-[#6366F1] active:scale-95 border-2 text-white font-bold px-4 py-2 rounded-md cursor-pointer flex gap-2 items-center hover:bg-[#4F46E5] transition-all duration-300"
                   >
                     <TbWorld />
                     Acessar
@@ -49,7 +49,7 @@ export function Projects({ objects }: listProjectsProps) {
                   <a
                     href={project.metadata.github_url}
                     target="_blank"
-                    className="border-2 border-[#6366F1]/50 px-4 py-1.5 rounded-md font-bold text-[#A5B4FC] cursor-pointer flex gap-2 items-center hover:bg-[#6366F1]/10 transition-all duration-300"
+                    className="border-2 active:scale-95 border-[#6366F1]/50 px-4 py-1.5 rounded-md font-bold text-[#A5B4FC] cursor-pointer flex gap-2 items-center hover:bg-[#6366F1]/10 transition-all duration-300"
                   >
                     <FaEye />
                     Github

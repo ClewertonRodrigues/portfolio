@@ -47,35 +47,35 @@ export function MobileMenu() {
           <div className="flex flex-col items-center justify-between gap-3 text-[#D1D5DB]">
             <a
               href="#inicio"
-              className={`hover:bg-[#4F46E5] w-full text-center py-3 rounded-md transition-colors duration-300 cursor-pointer text-lg font-bold ${activeSection === "inicio" ? "bg-[#6366F1]" : ""}`}
+              className={`hover:bg-[#4F46E5] active:scale-95 active:bg-[#4F46E5] w-full text-center py-3 rounded-md transition-all duration-300 cursor-pointer text-lg font-bold ${activeSection === "inicio" ? "bg-[#6366F1]" : ""}`}
               onClick={toggleMenu}
             >
               Início
             </a>
             <a
               href="#sobre"
-              className={`hover:bg-[#4F46E5] w-full text-center py-3 rounded-md transition-colors duration-300 cursor-pointer text-lg font-bold ${activeSection === "sobre" ? "bg-[#6366F1]" : ""}`}
+              className={`hover:bg-[#4F46E5] active:scale-95 active:bg-[#4F46E5] w-full text-center py-3 rounded-md transition-all duration-300 cursor-pointer text-lg font-bold ${activeSection === "sobre" ? "bg-[#6366F1]" : ""}`}
               onClick={toggleMenu}
             >
               Sobre
             </a>
             <a
               href="#tecnologias"
-              className={`hover:bg-[#4F46E5] w-full text-center py-3 rounded-md transition-colors duration-300 cursor-pointer text-lg font-bold ${activeSection === "tecnologias" ? "bg-[#6366F1]" : ""}`}
+              className={`hover:bg-[#4F46E5] active:scale-95 active:bg-[#4F46E5] w-full text-center py-3 rounded-md transition-all duration-300 cursor-pointer text-lg font-bold ${activeSection === "tecnologias" ? "bg-[#6366F1]" : ""}`}
               onClick={toggleMenu}
             >
               Tecnologias
             </a>
             <a
               href="#projetos"
-              className={`hover:bg-[#4F46E5] w-full text-center py-3 rounded-md transition-colors duration-300 cursor-pointer text-lg font-bold ${activeSection === "projetos" ? "bg-[#6366F1]" : ""}`}
+              className={`hover:bg-[#4F46E5] active:scale-95 active:bg-[#4F46E5] w-full text-center py-3 rounded-md transition-all duration-300 cursor-pointer text-lg font-bold ${activeSection === "projetos" ? "bg-[#6366F1]" : ""}`}
               onClick={toggleMenu}
             >
               Projetos
             </a>
             <a
               href="#contato"
-              className={`hover:bg-[#4F46E5] w-full text-center py-3 rounded-md transition-colors duration-300 cursor-pointer text-lg font-bold ${activeSection === "contato" ? "bg-[#6366F1]" : ""}`}
+              className={`hover:bg-[#4F46E5] active:scale-95 active:bg-[#4F46E5] w-full text-center py-3 rounded-md transition-all duration-300 cursor-pointer text-lg font-bold ${activeSection === "contato" ? "bg-[#6366F1]" : ""}`}
               onClick={toggleMenu}
             >
               Contato
