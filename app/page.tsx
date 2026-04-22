@@ -202,12 +202,24 @@ export default async function Home() {
           </p>
 
           <div className="flex justify-center gap-5 mt-5">
-            <div className="bg-[#6366F1] p-2 rounded-full md:hover:scale-110 active:scale-95 transition-all duration-300 hover:bg-[#4F46E5] cursor-pointer">
-              <FaLinkedin color="#fff" size={28} />
-            </div>
-            <div className="bg-[#6366F1] p-2 rounded-full md:hover:scale-110 active:scale-95 transition-all duration-300 hover:bg-[#4F46E5] cursor-pointer">
-              <FaGithub color="#fff" size={28} />
-            </div>
+            <a
+              href="https://www.linkedin.com/in/clewerton-rodrigues"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="linkedin"
+              className="bg-[#6366F1] p-2 rounded-full md:hover:scale-110 active:scale-95 hover:bg-[#4F46E5] transition-all duration-300 cursor-pointer"
+            >
+              <FaLinkedin color="white" size={28} />
+            </a>
+            <a
+              href="https://github.com/ClewertonRodrigues"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="github"
+              className="bg-[#6366F1] p-2 rounded-full md:hover:scale-110 active:scale-95 hover:bg-[#4F46E5] transition-all duration-300 cursor-pointer"
+            >
+              <FaGithub color="white" size={28} />
+            </a>
           </div>
         </div>
       </footer>
