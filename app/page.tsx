@@ -2,7 +2,7 @@ import myImg from "@/assets/new-img.jpeg";
 
 import Image from "next/image";
 
-import imgPortfolio from "@/assets/img-portfolio3.png";
+import imgHero from "@/assets/images/img-hero.png";
 
 import { FormContact } from "@/components/formContact";
 import { Technology } from "@/components/technology";
@@ -105,7 +105,7 @@ export default async function Home() {
           <div className="w-full max-w-md h-75 hidden lg:flex justify-center items-center relative">
             <div className="relative w-full h-full flex items-center justify-center">
               <Image
-                src={imgPortfolio}
+                src={imgHero}
                 alt="Imagem ilustrativa de desenvolvimento web"
                 priority={true}
                 fill={true}
