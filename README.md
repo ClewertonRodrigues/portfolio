@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧑‍💻 Portfólio Dev
 
-## Getting Started
+Aplicação de portfólio desenvolvida para apresentar meus projetos, habilidades e informações profissionais de forma moderna, responsiva e interativa.
 
-First, run the development server:
+O projeto foi construído com Next.js, explorando Server Components e Client Components, garantindo performance e uma boa experiência de usuário.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Os dados são gerenciados via Cosmic CMS, permitindo fácil atualização de conteúdos como projetos e seção "Sobre", sem necessidade de alterar o código.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Além disso, conta com um formulário de contato funcional utilizando EmailJS, com validação robusta feita com React Hook Form e Zod.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Tecnologias Utilizadas
 
-## Learn More
+- ⚛️ Next.js
+- 🔷 TypeScript
+- 🎨 Tailwind CSS
+- 🌐 Cosmic CMS
+- 📩 EmailJS
+- 📋 React Hook Form
+- ✅ Zod
+- 🎞️ AOS (Animate On Scroll)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📌 Funcionalidades
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+✔️ Consumo de dados dinâmicos via CMS (Cosmic)
+✔️ Atualização de conteúdo sem deploy
+✔️ Detecção de seção ativa na navegação (scroll spy)
+✔️ Animações suaves ao scroll com AOS
+✔️ Formulário de contato funcional
+✔️ Validação de formulário com Zod
+✔️ Interface responsiva e moderna
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📸 Preview
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Preview do Projeto](./public/preview.png)
+
+---
+
+## 🌎 Deploy
+
+Acesse o projeto online:
+
+👉 https://portfolio-clewerton.vercel.app
+
+---
+
+## 💡 Aprendizados
+
+- Arquitetura com Next.js (Server e Client Components)
+- Tipagem avançada com TypeScript
+- Integração com CMS (Cosmic)
+- Manipulação e validação de formulários
+- Experiência do usuário (UX/UI)
+- Organização e escalabilidade de código
