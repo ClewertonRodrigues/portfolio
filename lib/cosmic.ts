@@ -23,11 +23,11 @@ export async function getDataProjects() {
     );
 
     if (!res.ok) {
-      throw new Error("Failde to fetch data");
+      throw new Error("Failed to fetch data");
     }
 
     return res.json();
   } catch (err) {
-    throw new Error("Failde to fetch data");
+    throw new Error("Failed to fetch data");
   }
 }
