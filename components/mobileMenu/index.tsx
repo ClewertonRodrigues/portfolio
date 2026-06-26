@@ -19,6 +19,21 @@ export function MobileMenu() {
     }
   }, [open])
 
+  useEffect(() => {
+    function handleRezise(e: MediaQueryListEvent){
+      if(e.matches){
+        setOpen(false)
+      }
+    }
+
+    let windowWidth = matchMedia("(min-width: 768px)")
+    windowWidth.addEventListener("change", handleRezise);
+
+    return () => {
+      windowWidth.addEventListener("change", handleRezise)
+    }
+  }, [])
+
   function toggleMenu() {
     setOpen(prev => !prev)
   }
