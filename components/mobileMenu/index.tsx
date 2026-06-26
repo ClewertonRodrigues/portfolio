@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { IoMenu } from "react-icons/io5";
 import { IoIosClose } from "react-icons/io";
@@ -9,7 +9,15 @@ import useActiveSection from "@/components/activeSection"
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
-  const activeSection = useActiveSection()
+  const activeSection = useActiveSection();
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    }
+  }, [open])
 
   function toggleMenu() {
     setOpen(prev => !prev)
@@ -40,8 +48,9 @@ export function MobileMenu() {
       </button>
 
       {open && (
+        <>
         <div
-          className="absolute left-0 w-full bg-[#0F172A] gap-10 p-3 border-t border-[#6366F1]/20"
+          className="absolute left-0 w-full z-20 bg-[#0F172A] gap-10 p-3 border-t border-[#6366F1]/20"
           data-aos="fade-down"
         >
           <div className="flex flex-col items-center justify-between gap-3 text-[#D1D5DB]">
@@ -82,6 +91,12 @@ export function MobileMenu() {
             </a>
           </div>
         </div>
+
+        <div 
+          className="bg-black/20 backdrop-blur-xs fixed h-screen w-full top-20 left-0 right-0 bottom-0 z-10 transition-all duration-300"
+          onClick={toggleMenu}
+        ></div>
+        </>
       )}
     </div>
   );
