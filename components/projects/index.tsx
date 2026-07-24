@@ -9,6 +9,11 @@ interface listProjectsProps{
 }
 
 export function Projects({ objects }: listProjectsProps) {
+
+  const projectOrdered = objects.objects.sort((a, b) => {
+    return a.metadata.display_order - b.metadata.display_order;
+  })
+
   return (
     <section className="py-10 bg-[#12182A]" id="projetos">
       <h2
@@ -19,7 +24,7 @@ export function Projects({ objects }: listProjectsProps) {
       </h2>
 
       <div className="w-full max-w-7xl mt-10 mx-auto grid md:grid-cols-2 gap-6 md:gap-4 px-3">
-        {objects.objects.map(project => (
+        {projectOrdered.map(project => (
           <div
             key={project.metadata.title}
             className="bg-[#0F172A] rounded-xl overflow-hidden border border-[#1F2937] group transform-gpu hover:-translate-y-1 hover:shadow hover:shadow-[#6366F1]/20 transition-transform duration-300"

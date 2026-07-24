@@ -1,21 +1,21 @@
-
-export interface ProjectsProps{
-    objects: ItemProjectProps[]
+export interface ProjectsProps {
+  objects: ItemProjectProps[];
 }
 
-interface ItemProjectProps{
-    metadata: {
-        title: string;
-        description: string;
-        thumbnail: {
-            url: string;
-        }
-        github_url: string;
-        live_url: string;
-        techs: TechProps[];
-    }
+interface ItemProjectProps {
+  metadata: {
+    title: string;
+    description: string;
+    thumbnail: {
+      url: string;
+    };
+    github_url: string;
+    live_url: string;
+    techs: TechProps[];
+    display_order: number;
+  };
 }
 
-interface TechProps{
-    name: string;
+interface TechProps {
+  name: string;
 }
