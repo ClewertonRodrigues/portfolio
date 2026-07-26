@@ -8,28 +8,34 @@ export default function useActiveSection() {
   useEffect(() => {
     const sections = document.querySelectorAll("section");
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {
-        threshold: 0.5,
-      },
-    );
+    function handleScroll(){
+      const scrollPosition = window.scrollY + window.innerHeight * 0.5;
 
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
+      let currentSection = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+
+        if(scrollPosition >= sectionTop){
+          currentSection = section.id;
+        }
+      })
+
+      setActiveSection(currentSection);
+    }
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    })
+
+    window.addEventListener("resize", handleScroll);
 
     return () => {
-      sections.forEach((section) => {
-        observer.unobserve(section);
-      });
-    };
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    }
   }, []);
 
   return activeSection;
