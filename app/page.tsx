@@ -92,7 +92,7 @@ export default async function Home() {
                 <FaGithub color="white" size={28} />
               </a>
               <a
-                href="/curriculo.pdf"
+                href="/curriculo-clewerton.pdf"
                 download="Clewerton_Rodrigues_CV.pdf"
                 aria-label="curriculo"
                 className="bg-[#6366F1] p-2 rounded-full md:hover:scale-110 active:scale-95 hover:bg-[#4F46E5] transition-all duration-300 cursor-pointer"
